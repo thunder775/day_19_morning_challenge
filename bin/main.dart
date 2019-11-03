@@ -16,7 +16,7 @@ int comparator1(int a, int b) {
   if (a.toString().length < b.toString().length) return 1;
   if (a.toString().length == b.toString().length) {
     if (a < b) return -1;
-
+    if(a==b) return 0;
     if (a > b) return 1;
   } else {
     return 0;
@@ -39,7 +39,7 @@ bool isValidIP(String ipAddress) {
   }
   for (String x in values) {
     print(x);
-    if (x.length > 1 && x[0] == '0') {
+    if (x.length == 1 && x[0] == '0') {
       return false;
     }
   }
@@ -67,7 +67,7 @@ String characterSwap(String word, String char1, String char2) {
 }
 
 main() {
-  digitLength([9, 44, 1, 22]);
-  print(characterSwap("aabbccc", "a", "b"));
-  print(isValidIP("123.045.067.089"));
+  digitLength([9,33, 44, 1, 22]);
+  print(characterSwap("aababccc", "a", "b"));
+  print(isValidIP("123.045.06.70"));
 }
